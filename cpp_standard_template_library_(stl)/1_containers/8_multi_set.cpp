@@ -16,6 +16,15 @@ void explain_multi_set()
     multiset<int> ms;
     ms.insert(1);
     ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
+    ms.insert(1);
     ms.insert(3);
     ms.insert(2);
     ms.insert(2);
@@ -33,4 +42,6 @@ void explain_multi_set()
     int cnt = ms.count(1);
     cout << cnt << endl;
     // cout<<ms.size()<<endl;
+    auto h = ms.find(10);
+    h != ms.end() ? cout << *h : cout << "not found";
 }
