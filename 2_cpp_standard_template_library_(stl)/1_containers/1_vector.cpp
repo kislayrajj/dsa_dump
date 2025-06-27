@@ -104,7 +104,7 @@ void explainVector()
     // vector<int> copy(4, 200);
     // v2.insert(v2.begin(), copy.begin(), copy.end());
 
-    // cout << v2.size();
+    // cout << v2. e();
     v2.pop_back();
 
     // v.swap(v2);

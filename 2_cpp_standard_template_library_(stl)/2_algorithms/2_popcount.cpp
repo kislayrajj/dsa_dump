@@ -15,3 +15,4 @@ void explain_popcount()
     int cnt = __builtin_popcount(num);
     cout << cnt << endl;
 }
+ 
