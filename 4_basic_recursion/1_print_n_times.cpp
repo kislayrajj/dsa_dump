@@ -1,19 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void printNTimes(int n);
+void printNTimes(int n, int m);
 
 int main()
 {
-    int n = 30;
-    printNTimes(n);
+    int m = 5;
+    printNTimes(1, m);
     return 0;
 }
 
-void printNTimes(int n)
+void printNTimes(int n, int m)
 {
-    if (n == 0)
+    if (n > m)
         return;
-    printNTimes(n - 1);
-    cout << n << " ";
+    printNTimes(n + 1, m);
+    cout << " KR" << endl;
 }
