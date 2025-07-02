@@ -1,43 +1,73 @@
 // #include <bits/stdc++.h>
 // using namespace std;
 
-// void revArr(int arr[], int a, int b);
+// void revArr(int a[], int l, int r);
 
 // int main()
 // {
-//     int arr[] = {1, 2, 3, 4, 5, 6, 7};
-//     int n = sizeof(arr) / sizeof(arr[0]);
-//     revArr(arr, 0, n-1);
+//     int a[] = {1, 2, 3, 4, 5, 6};
+//     int n = sizeof(a) / sizeof(a[0]);
+//     cout << "Original Array: ";
 //     for (int i = 0; i < n; i++)
 //     {
-//         cout << arr[i] << " ";
+//         cout << a[i] << " ";
 //     }
+
+//     revArr(a, 0, n - 1);
+//     cout << "\nReversed Array: ";
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << a[i] << " ";
+//     }
+
+// return 0
 // }
 
-// void revArr(int arr[], int a, int b)
+// void revArr(int a[], int l, int r)
 // {
-//     if (a >= b)
+//     if (l > r)
 //         return;
 
-//     swap(arr[a], arr[b]);
-//     revArr(arr, a + 1, b - 1);
+//     swap(a[l], a[r]);
+//     revArr(a, l + 1, r - 1);
 // }
 
-// 2nd way
+// using one variable
 
 #include <bits/stdc++.h>
 using namespace std;
 
-void revArr(int arr[], int n);
+// void revArr(int arr[], int n);
 
-int main()
-{
-    int arr[] = {1, 2, 3, 4, 5, 6, 6, 7, 8};
-    int n = sizeof(arr) / sizeof(arr[0]);
+// int main()
+// {
+//     int a[] = {1, 2, 3, 4, 5, 6, 7};
+//     int n = (sizeof(a) / sizeof(a[0]));
 
-    revArr(arr, n-1);
-    for (int i = 0; i < n; i++)
-    {
-        cout << i << " ";
-    }
-}
+//     cout << "Original array: ";
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << a[i] << " ";
+//     }
+
+//     revArr(a, n - 1);
+
+//     cout << "\nReversed array: ";
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << a[i] << " ";
+//     }
+
+//     return 0;
+// }
+
+// void revArr(int a[], int n)
+// {
+//     if (n <= 1)
+//     {
+//         return;
+//     };
+//     swap(a[0], a[n]);
+//     revArr(a + 1, n - 1);
+// }
+
