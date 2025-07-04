@@ -76,4 +76,5 @@ void explain_map()
     auto it = mp.find(800);
     // cout<< it->first<< endl; 
     cout<< (*it).second<< endl; 
+    cout<<INT_MIN<<endl;
 }

@@ -10,4 +10,5 @@ int main(){
 
 void explain_unordered_map(){
     // same as map but keys are not sorted.
+    // pair as key is not supported by default
 }
