@@ -5,7 +5,7 @@ int findMissingNumberInArr(vector<int> &arr);
 
 int main()
 {
-    vector<int> arr = {3, 2, 1, 4, 0};
+    vector<int> arr = {3, 2, 1, 4, 5,0};
     int result = findMissingNumberInArr(arr);
     cout << result << endl;
     return 0;
@@ -26,8 +26,8 @@ int findMissingNumberInArr(vector<int> &arr)
         total += i;
     }
 
-    cout << "count: " << count << endl;
-    cout << "total: " << total << endl;
+    // cout << "count: " << count << endl;
+    // cout << "total: " << total << endl;
 
     missingNum = total - count;
     if (missingNum)
