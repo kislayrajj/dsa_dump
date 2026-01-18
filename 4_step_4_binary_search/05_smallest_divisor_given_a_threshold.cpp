@@ -9,7 +9,7 @@ int main()
 {
     // vector<int> arr = {1, 2, 5, 9};
     // int threshold = 6;
-    vector<int> arr = {44,22,33,11,1};
+    vector<int> arr = {44, 22, 33, 11, 1};
     int threshold = 5;
 
     int result = findSmallestDivisor(arr, threshold);
