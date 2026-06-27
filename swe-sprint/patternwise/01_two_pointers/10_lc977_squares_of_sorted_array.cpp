@@ -36,7 +36,7 @@ int main()
 //     return sortedSquaresArr;
 // }
 
-// optimal solution with tc O(n)
+// optimal solution with tc O(n) requiring only one pass get the result.
 
 vector<int> sortedSquares(vector<int> &arr)
 {
