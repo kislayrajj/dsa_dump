@@ -24,28 +24,53 @@ int main()
     return 0;
 }
 
-// brute force solution
+// // brute force solution
+// vector<int> maxSlidingWindow(vector<int> &arr, int k)
+// {
+//     vector<int> ans;
+//     int n = arr.size();
+
+//     if (n == 1)
+//     {
+//         ans.push_back(arr[0]);
+//         return ans;
+//     }
+
+//     for (int i = 0; i <= n - k; i++)
+//     {
+//         int maxInWin = INT_MIN;
+
+//         for (int j = i; j < i + k; j++)
+//         {
+//             maxInWin = max(maxInWin, arr[j]);
+//         }
+
+//         ans.push_back(maxInWin);
+//     }
+
+//     return ans;
+// }
+
+// optimal solution using monotonic deque
 vector<int> maxSlidingWindow(vector<int> &arr, int k)
 {
     vector<int> ans;
     int n = arr.size();
+    deque<int> dq;
 
-    if (n == 1)
+    for (int i = 0; i < n; i++)
     {
-        ans.push_back(arr[0]);
-        return ans;
-    }
+        if (!dq.empty() && dq.front() <= i - k)
+            dq.pop_front();
 
-    for (int i = 0; i <= n - k; i++)
-    {
-        int maxInWin = INT_MIN;
-
-        for (int j = i; j < i + k; j++)
+        while (!dq.empty() && arr[i] >= arr[dq.back()])
         {
-            maxInWin = max(maxInWin, arr[j]);
+            dq.pop_back();
         }
+        dq.push_back(i);
 
-        ans.push_back(maxInWin);
+        if (i >= k - 1)
+            ans.push_back(arr[dq.front()]);
     }
 
     return ans;
